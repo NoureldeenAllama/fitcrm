@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>fitFAT | Client View</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>fitFAT</h1>
+    <nav>
+      <a href="index.html">Add Client</a>
+      <a href="clients.html">View Clients</a>
+    </nav>
+  </header>
+
+  <!-- Quote section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="assets/icons/mm2.jpg" alt="Muscle Man" class="hero-img" />
+      <blockquote class="hero-quote">"You Fit...ah...We Fit. And you like...have to Fit dude. Because you're FAT. GET it? fitFAT."</blockquote>
+      <p class="hero-name">– Muscle Man (founder and CEO of fitFAT)</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="client-name">Client Details</h2>
+
+      <div id="client-details" class="client-details card small">
+        <!-- JS fills details -->
+      </div>
+
+      <section class="card small">
+        <h3>Training History</h3>
+        <ul id="history-list"></ul>
+
+        <form id="history-form">
+          <label for="history-text">Add session</label>
+          <textarea id="history-text" rows="2" placeholder="Date, notes, exercises..."></textarea>
+          <div style="margin-top:0.5rem">
+            <button type="submit" class="btn small primary">Add to history</button>
+            <a href="clients.html" class="btn small">Back to clients</a>
+          </div>
+        </form>
+      </section>
+
+      <section class="card small">
+        <h3>Suggested Exercises for Next Session</h3>
+        <div id="exercise-list">Loading exercises…</div>
+        <p class="muted">Suggested exercises are pulled from the public Wger API. If they fail to load due to CORS, a friendly message will appear.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 fitFAT. Some rights reserved, Not All.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

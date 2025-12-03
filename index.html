@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>fitFAT | Add New Client</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>fitFAT | Add / Edit Client</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
@@ -18,50 +18,57 @@
   <!-- Quote section -->
   <section class="hero">
     <div class="hero-content">
-      <img src="assets/icons/mm2.jpg" alt="Quote author" class="hero-img" />
-      <blockquote class="hero-quote">"You Fit...ah...We Fit. And you like...have to Fit dude. Because you're FAT. GET it? fitFAT. How long do I have to keep talking again?..."</blockquote>
+      <img src="assets/icons/mm2.jpg" alt="Muscle Man" class="hero-img" />
+      <blockquote class="hero-quote">"You Fit...ah...We Fit. And you like...have to Fit dude. Because you're FAT. GET it? fitFAT."</blockquote>
       <p class="hero-name">– Muscle Man (founder and CEO of fitFAT)</p>
     </div>
   </section>
 
   <main class="container">
     <section class="card">
-      <h2>Add New Client</h2>
-      <form id="new-client-form">
+      <h2 id="form-title">Add New Client</h2>
+
+      <form id="client-form" novalidate>
         <div class="form-grid">
           <div class="form-group">
-            <label for="name">Full Name</label>
+            <label for="name">Full Name *</label>
             <input type="text" id="name" placeholder="Enter full name" required />
+            <small class="error" data-for="name"></small>
           </div>
 
           <div class="form-group">
             <label for="age">Age</label>
-            <input type="number" id="age" min="1" max="120" placeholder="Age" required />
+            <input type="number" id="age" min="1" max="120" placeholder="Age" />
+            <small class="error" data-for="age"></small>
           </div>
 
           <div class="form-group">
             <label for="gender">Gender</label>
-            <select id="gender" required>
+            <select id="gender">
               <option value="">Select gender</option>
               <option>Male</option>
               <option>Female</option>
-              <option>Other</option>
-              <option>Prefer not to say</option>
+              
+              
+              
             </select>
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email *</label>
             <input type="email" id="email" placeholder="name@example.com" required />
+            <small class="error" data-for="email"></small>
           </div>
 
           <div class="form-group">
-            <label for="phone">Phone Number</label>
+            <label for="phone">Phone Number *</label>
             <input type="tel" id="phone" placeholder="xxxx-xxx-xx-01" required />
+            <small class="muted">Format example: 8888-555-77-01</small>
+            <small class="error" data-for="phone"></small>
           </div>
 
           <div class="form-group">
-            <label for="goal">Fitness Goal</label>
+            <label for="goal">Fitness Goal *</label>
             <select id="goal" required>
               <option value="">Select goal</option>
               <option>Weight Loss</option>
@@ -71,16 +78,28 @@
               <option>General Fitness</option>
               <option>Other</option>
             </select>
+            <small class="error" data-for="goal"></small>
           </div>
 
           <div class="form-group">
-            <label for="start-date">Membership Start Date</label>
+            <label for="start-date">Membership Start Date *</label>
             <input type="date" id="start-date" required />
+            <small class="error" data-for="start-date"></small>
+          </div>
+
+          <div class="form-group full">
+            <label for="history">Training history (optional)</label>
+            <textarea id="history" rows="3" placeholder="Add past sessions or notes (optional)"></textarea>
+            <small class="muted">First history entry will be saved with the client.</small>
           </div>
         </div>
 
-        <button type="button" class="btn primary">Add Client</button>
-        <p class="note">*We are legaly exempted from any physical...or mental damage that could happen while you train at our Gyms.*</p>
+        <div class="form-actions">
+          <button id="submit-btn" type="submit" class="btn primary">Add Client</button>
+          <button id="cancel-edit" type="button" class="btn" style="display:none">Cancel Edit</button>
+        </div>
+
+        <p class="note">*We are legally exempted from any physical or mental damage that could happen while you train at our Gyms.*</p>
       </form>
     </section>
   </main>
@@ -88,5 +107,7 @@
   <footer>
     <p>© 2025 fitFAT. Some rights reserved, Not All.</p>
   </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>fitFAT | Client List</title>
-<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
@@ -18,49 +18,34 @@
   <!-- Quote section -->
   <section class="hero">
     <div class="hero-content">
-      <img src="assets/icons/mm2.jpg" alt="Quote author" class="hero-img" />
-      <blockquote class="hero-quote">"You Fit...ah...We Fit. And you like...have to Fit dude. Because you're FAT. GET it? fitFAT. How long do I have to keep talking again?..."</blockquote>
+      <img src="assets/icons/mm2.jpg" alt="Muscle Man" class="hero-img" />
+      <blockquote class="hero-quote">"You Fit...ah...We Fit. And you like...have to Fit dude. Because you're FAT. GET it? fitFAT."</blockquote>
       <p class="hero-name">– Muscle Man (founder and CEO of fitFAT)</p>
     </div>
   </section>
 
-
   <main class="container">
     <section class="card">
       <h2>Client List</h2>
-      <input type="search" id="search" placeholder="Search clients..." class="search-box" />
 
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Goal</th>
-              <th>Start Date</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Mike Morgan</td><td>mickymouse@test.com</td><td>8888-555-77-01</td><td>Weight Loss</td><td>2025-02-15</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>Tyson Oplak</td><td>tys.op@test.com</td><td>8888-555-77-02</td><td>Muscle Gain</td><td>2025-03-10</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>Mordecai Bird</td><td>Morebird@test.com</td><td>8888-555-77-03</td><td>Endurance</td><td>2025-01-22</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>Rigby Racoon</td><td>Rigrac@test.com</td><td>8888-555-77-04</td><td>General Fitness</td><td>2025-05-02</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>Benson Boss</td><td>Bboss@test.com</td><td>8888-555-77-05</td><td>Weight Loss</td><td>2024-12-01</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>Skips Skips</td><td>yetiman@test.com</td><td>8888-555-77-06</td><td>Muscle Gain</td><td>2025-02-05</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>Pops Candy</td><td>popsweets@test.com</td><td>8888-555-77-07</td><td>Flexibility</td><td>2025-03-30</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>William Afton</td><td>purple.guy@test.com</td><td>8888-555-77-08</td><td>Endurance</td><td>2025-04-14</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>Mohamed Ali</td><td>mhmd.ali@test.com</td><td>8888-555-77-09</td><td>General Fitness</td><td>2025-01-08</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-            <tr><td>Eddie Brock</td><td>venom@test.com</td><td>8888-555-77-10</td><td>Weight Loss</td><td>2025-02-25</td><td><button class="btn small">Edit</button><button class="btn danger small">Delete</button></td></tr>
-          </tbody>
-        </table>
+      <div class="list-controls">
+        <input id="search" type="search" placeholder="Search by name, email, phone, or goal..." class="search-box" />
+        <button id="clear-search" class="btn small">Clear</button>
+        <button id="seed-btn" class="btn small" title="Seed sample clients">Seed Sample</button>
       </div>
+
+      <div id="clients-wrapper" class="table-wrapper">
+        <!-- JS renders dynamic table here -->
+      </div>
+
+      <p class="note">Click <strong>View</strong> to open details. <strong>Edit</strong> will pre-fill the Add form. <strong>Delete</strong> removes client.</p>
     </section>
   </main>
 
   <footer>
     <p>© 2025 fitFAT. Some rights reserved, Not All.</p>
   </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
